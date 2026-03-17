@@ -1,0 +1,94 @@
+.diagram-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  animation: fadeIn 0.3s ease both;
+}
+.diagram-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.diagram-title {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-primary);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.diagram-title svg { color: var(--green); }
+.diagram-type-badge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--green);
+  background: var(--green-dim);
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.diagram-body {
+  padding: 16px;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.diagram-svg-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+.diagram-svg-wrap svg {
+  max-width: 100%;
+  height: auto;
+}
+.diagram-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+.diagram-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border);
+  border-top-color: var(--green);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+.diagram-error {
+  display: flex;
+  gap: 10px;
+  color: var(--red);
+  font-size: 13px;
+  align-items: flex-start;
+}
+.diagram-error svg { flex-shrink: 0; margin-top: 2px; }
+.diagram-error p { margin-bottom: 6px; }
+.diagram-error pre {
+  font-size: 11px;
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+  padding: 6px 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+.mermaid-source {
+  font-size: 11px !important;
+  color: var(--text-secondary) !important;
+  max-height: 200px;
+  overflow-y: auto;
+}
+details summary {
+  cursor: pointer;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
