@@ -57,7 +57,7 @@ export default function App() {
 
     countdownIntervalRef.current = setInterval(async () => {
       try {
-        const res = await fetch('/rate-limit-status')
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/rate-limit-status`)
         const data = await res.json()
 
         if (!data.is_limited || data.remaining_seconds <= 0) {
@@ -113,7 +113,7 @@ export default function App() {
       const history = activeSession.messages.map(m => ({ role: m.role, content: m.content }))
       history.push({ role: 'user', content: text })
 
-      const res = await fetch('/chat', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ messages: history, stream: true })
