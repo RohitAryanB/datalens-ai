@@ -1,5 +1,9 @@
 {
   "appId": "com.rohit.datalens",
-  "appName": "datalens-ai-frontend",
-  "webDir": "dist"
+  "appName": "DataLens AI",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https",
+    "allowNavigation": ["datalens-backend-ecqy.onrender.com"]
+  }
 }
