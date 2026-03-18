@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import Sidebar from './components/Sidebar.jsx'
 import ChatArea from './components/ChatArea.jsx'
 import './App.css'
+const API_BASE = import.meta.env.VITE_API_URL || 'https://datalens-backend-ecqy.onrender.com'
 
 const SUGGESTED_QUERIES = [
   "Show me the top 5 products by revenue",
@@ -57,7 +58,7 @@ export default function App() {
 
     countdownIntervalRef.current = setInterval(async () => {
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/rate-limit-status`)
+        const res = await fetch(`${API_BASE}/rate-limit-status`)
         const data = await res.json()
 
         if (!data.is_limited || data.remaining_seconds <= 0) {
@@ -113,7 +114,7 @@ export default function App() {
       const history = activeSession.messages.map(m => ({ role: m.role, content: m.content }))
       history.push({ role: 'user', content: text })
 
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/chat`, {
+      const res = await fetch(`${API_BASE}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ messages: history, stream: true })
