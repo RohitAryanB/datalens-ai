@@ -4,6 +4,8 @@ Live Deployment: https://dlns.netlify.app
 A full-stack conversational AI application that lets you query databases, generate visualizations, and explore data using natural language. Built with Claude (Anthropic), FastAPI, and React.
 
 ---
+# Click  the below link for both Demo video and ppt
+https://drive.google.com/drive/folders/1cxG4BCIOvvtttvLj8KQJ1KW7kaXbcXXy?usp=sharing
 
 ## ✨ Features
 
