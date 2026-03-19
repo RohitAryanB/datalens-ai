@@ -1,4 +1,5 @@
 # DataLens AI — Intelligent LLM Database Agent
+Live Deployment: https://dlns.netlify.app
 
 A full-stack conversational AI application that lets you query databases, generate visualizations, and explore data using natural language. Built with Claude (Anthropic), FastAPI, and React.
 
